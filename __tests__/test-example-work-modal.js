@@ -43,7 +43,7 @@ describe("ExampleWorkModal component", () => {
 		expect(openCompoenent.find(".background--skyBlue").hasClass('modal--open')).toBe(true);
 	});
 
-	it("Should close the open modal by calling closeModal parmeter", () => {
+	it("Should close the open modal by calling closeModal parameter", () => {
 		openCompoenent.find(".modal__closeButton").simulate('click');
 		expect(mockCloseModalFn).toHaveBeenCalled();
 	});
