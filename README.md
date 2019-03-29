@@ -74,14 +74,16 @@ Enzyme - a JavaScript testing utility for managing outputs
 	./__tests__/test-expale-work-modal
 											- Added @jest-environment node comment at top as needed by
 												Enzyme version
+	./__tests__/test-social.js
+											- Added test file for SocialItems, SocialIcon components
 
 ## TODO
-	- Add unit tests for social components
 	- Add Provider to main.js to load data from AWS DynamoDB via AWS API Gateway
 			(serverless data). Consider component state and constructor with local/static
 			data.
 	- Add Service Worker to cache data on browsers
-	- Covert static JSX classes to functions
+	- Move icons and fonts into local files
+	- Covert stateless JSX classes to functions
 	- Covert person-specific HTML in index.html to components and Provider(s)
 	- Add "Team" page to enable switching between data profiles
 	- Create CloudFormation YAML to deploy solution in a stack. Note: manual AWS
