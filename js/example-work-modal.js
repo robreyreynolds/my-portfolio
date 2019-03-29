@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ExampleWorkModl extends React.Component {
+class ExampleWorkModal extends React.Component {
 	render() {
 		let example = this.props.example;
 		let modalClass = this.props.open ? 'modal--open' : 'modal--closed';
@@ -31,4 +31,4 @@ class ExampleWorkModl extends React.Component {
 	};
 };
 
-	export default ExampleWorkModl;
+	export default ExampleWorkModal;
