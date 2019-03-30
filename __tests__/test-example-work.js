@@ -6,40 +6,22 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ExampleWork, { ExampleWorkBubble } from '../js/example-work';
 
-
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
-const myWork = [
-	{
-		'title': "Work Example",
-		'image': {
-			'descr': "example screenshot of a project involving code",
-			'src': "images/example1.png",
-			'comment': ""
-		}
-	},
-	{
-		'title': "Work Example",
-		'image': {
-			'descr': "example screenshot of a project involving chemistry",
-			'src': "images/example2.png",
-			'comment': `"Chemistry" by Surian Soosay is licensed under CC BY 2.0
-									https://www.flickr.com/photos/ssoosay/4097410999`
-		}
-	}
-];
+import work from '../data/work.json';
+
 
 describe("ExampleWork Component", () => {
-	let component = shallow(<ExampleWork work={myWork}/>);
+	let component = shallow(<ExampleWork />);
 
 	it ("Should be a span element", () => {
 		expect(component.type()).toEqual('span');
 	});
 
-	it ("Should contain as many children as there are work examples", () => {
-		expect(component.find('ExampleWorkBubble').length).toEqual(myWork.length);
+	it ("Should contain as many children as there are records in data file", () => {
+		expect(component.find('ExampleWorkBubble').length).toEqual(work.length);
 	});
 
 	it("Should allow the modal to open and close", () => {
@@ -52,7 +34,7 @@ describe("ExampleWork Component", () => {
 
 describe("ExampleWorkBubble Component", () => {
 	let mockOpenModalFn = jest.fn();
-	let component = shallow(<ExampleWorkBubble example={myWork[1]}
+	let component = shallow(<ExampleWorkBubble example={work[1]}
 		openModal={mockOpenModalFn}/>);
 	let images = component.find("img");
 
@@ -61,7 +43,7 @@ describe("ExampleWorkBubble Component", () => {
 	});
 
 	it ("Should have the image src set correctly", () => {
-		expect(images.prop("src")).toEqual(myWork[1].image.src);
+		expect(images.prop("src")).toEqual(work[1].image.src);
 	});
 
 	it("Should call the openModal handler when clicked", () => {

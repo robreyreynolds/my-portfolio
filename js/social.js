@@ -1,10 +1,11 @@
 import React from 'react';
+import social from '../data/social.json';
 
 class SocialItems extends React.Component {
 	render() {
 		return (
 			<span>
-				{ this.props.social.map( (SocialIcontem, idx) => {
+				{ social.map( (SocialIcontem, idx) => {
 						return (<SocialIcon socialItem={SocialIcontem} key={idx}  />)
 					})
 				}

@@ -1,0 +1,30 @@
+[
+  {
+    "downloadText": "\"\"",
+    "href": "https://www.linkedin.com/in/robertreyreynolds",
+    "icon": "fa fa-linkedin",
+    "target": "_blank",
+    "title": "LinkedIn Profile"
+  },
+  {
+    "downloadText": "\"\"",
+    "href": "https://github.com/robreyreynolds",
+    "icon": "fa fa-github",
+    "target": "_blank",
+    "title": "GitHub Profile"
+  },
+  {
+    "downloadText": "\"\"",
+    "href": "https://twitter.com/robreyreynolds",
+    "icon": "fa fa-twitter",
+    "target": "_blank",
+    "title": "Twitter Profile"
+  },
+  {
+    "downloadText": "RobertReynoldsBrief.pdf",
+    "href": "RobertReynoldsBrief.pdf",
+    "icon": "fa fa-file-text",
+    "target": "_blank",
+    "title": "Résumé"
+  }
+]

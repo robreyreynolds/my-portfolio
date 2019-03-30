@@ -60,16 +60,26 @@ Enzyme - a JavaScript testing utility for managing outputs
 	IAM - Cloud identity and access management
 
 ## Functionality added by Robert Reynolds
-	./styles/main.css		- Added .fa style to size icons consistent with mobile
+./index.HTML				- Replaced social icon HTML with ul tag for social component;
+										- Added meta viewport statement to header for mobile
+											friendly use. See https://search.google.com/test/mobile-friendly
+./styles/main.css		- Added .fa style to size icons consistent with mobile
 												friendly use. See https://search.google.com/test/mobile-friendly
-	./js/social.js			- Converted social icons in index.html into JSX for data
+./js/main.js				- Added import of social components;
+										- Added second ReactDOM.render command for social components;
+										-	Added social data
+										- Moved work data and social data to separate data folder
+										- Removed Example-Work prop and SocialItems prop from component
+												ReactDOM.render calls
+./js/example-work.js
+										- Removed props from ExampleWork component and  added import
+												of work data from data file.
+./js/social.js			- Converted social icons from index.html into JSX for data
 												driven display of social icons/links
-	./js/main.js				- Added import of social components;
-												Added second ReactDOM.render command for social components;
-												Added social data
-	./index.HTML				- Replaced social icon HTML with ul tag for social component;
-												Added meta viewport statement to header for mobile
-												friendly use. See https://search.google.com/test/mobile-friendly
+										- Removed props and added import of social data from data file
+./data/work.json	-Created initial state data from original main.js data element
+./data/social.json
+									-Created initial state data from original main.js data element
 	./__tests__/test-expale-work,
 	./__tests__/test-expale-work-modal
 											- Added @jest-environment node comment at top as needed by
@@ -78,9 +88,10 @@ Enzyme - a JavaScript testing utility for managing outputs
 											- Added test file for SocialItems, SocialIcon components
 
 ## TODO
-	- Add Provider to main.js to load data from AWS DynamoDB via AWS API Gateway
-			(serverless data). Consider component state and constructor with local/static
-			data.
+	- Add Provider to js module to load data from AWS DynamoDB via AWS API Gateway
+			(serverless data). Consider component state and constructor with local/static.
+			Two step - data from import, data from async API (non-block with callback to
+			update state).
 	- Add Service Worker to cache data on browsers
 	- Move icons and fonts into local files
 	- Covert stateless JSX classes to functions

@@ -10,22 +10,8 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
-const mySocial = [
-	{
-		'title': 'LinkedIn Profile',
-		'target': '_blank',
-		'href': "https://example.com",
-	 	'icon': 'fa fa-linkedin',
-		'downloadText': '""'
-	},
-	{
-		'title': 'GitHub Profile',
-		'target': '_blank',
-		'href': "https://example.com",
-	 	'icon': "fa fa-github",
-		'downloadText': '""'
-	}
-];
+import mySocial from '../data/social.json';
+
 
 describe("SocialItems Component", () => {
 	let component = shallow(<SocialItems social={mySocial}/>);
